@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrainsMono Nerd Font 12
+font pango:JetBrainsMono Nerd Font Bold 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -65,7 +65,7 @@ bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
+bindsym $mod+Left focus left 
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
@@ -179,7 +179,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# wallpaper
+bindsym $mod+Tab workspace next 
+bindsym $mod+Shift+Tab workspace prev
+
+##EXECS
 # exec_always feh --bg-scale Pictures/95166362_p0_master1200.jpg
 exec_always feh --bg-fill Pictures/77667554_p0.jpg
 
@@ -189,14 +192,19 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 default_border pixel 5
 default_floating_border pixel 5
 
+smart_borders on
+##GAPS
+# gaps inner 10px
+
+##COLORS
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.focused          #7aa2f7 #7aa2f7 #ffffff #7aa2f7   #7aa2f7
+client.focused_inactive #333333 #5f676a #ffffff #7aa2f7   #7aa2f7
+client.unfocused        #333333 #222222 #888888 #292d2e   #565f89
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #ffffff
+client.background       #7aa2f7
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
