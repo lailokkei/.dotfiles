@@ -45,7 +45,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -182,15 +182,17 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Tab workspace next 
 bindsym $mod+Shift+Tab workspace prev
 
+bindsym $mod+c exec code
+
 ##EXECS
 # exec_always feh --bg-scale Pictures/95166362_p0_master1200.jpg
-exec_always feh --bg-fill Pictures/77667554_p0.jpg
+exec feh --bg-fill Pictures/77667554_p0.jpg
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-default_border pixel 5
-default_floating_border pixel 5
+default_border pixel 4
+default_floating_border pixel 2
 
 smart_borders on
 ##GAPS
@@ -198,13 +200,14 @@ smart_borders on
 
 ##COLORS
 # class                 border  backgr. text    indicator child_border
-client.focused          #7aa2f7 #7aa2f7 #ffffff #7aa2f7   #7aa2f7
-client.focused_inactive #333333 #5f676a #ffffff #7aa2f7   #7aa2f7
-client.unfocused        #333333 #222222 #888888 #292d2e   #565f89
+client.focused          #546cf0 #546cf0 #ffffff #7aa2f7   #7aa2f7
+client.focused_inactive #546cf0 #546cf0 #ffffff #7aa2f7   #7aa2f7
+client.unfocused        #11111b #11111b #565f89 #292d2e   #11111b
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #7aa2f7
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
