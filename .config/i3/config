@@ -196,7 +196,7 @@ default_floating_border pixel 2
 
 smart_borders on
 ##GAPS
-# gaps inner 10px
+# gaps inner 8px
 
 ##COLOR VARS
 
@@ -212,9 +212,9 @@ set $urgent
 ##COLORS
 # class                 border  backgr. text    indicator child_border
 client.focused          #7aa2f7 #7aa2f7 #11111b #7aa2f7   #7aa2f7
-client.focused_inactive #11111b #11111b #ffffff #7aa2f7   #11111b
-client.unfocused        #11111b #11111b #565f89 #292d2e   #11111b
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.focused_inactive #11111b #11111b #565f89 #11111b   #11111b
+client.unfocused        #11111b #11111b #565f89 #11111b   #11111b
+client.urgent           #f7768e #f7768e #11111b #f7768e   #f7768e
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #7aa2f7

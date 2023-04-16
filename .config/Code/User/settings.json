@@ -9,7 +9,7 @@
 
     "workbench.colorCustomizations": {
         "[Tokyo Night]": {
-            "editor.background": "#0e0f16"
+            "editor.background": "#11111b"
         }
     },
     "terminal.integrated.defaultProfile.linux": "zsh"
