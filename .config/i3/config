@@ -186,7 +186,7 @@ bindsym $mod+c exec code
 
 ##EXECS
 # exec_always feh --bg-scale Pictures/95166362_p0_master1200.jpg
-exec feh --bg-fill Pictures/77667554_p0.jpg
+exec feh --bg-fill Pictures/wall_0.jpg
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -198,10 +198,21 @@ smart_borders on
 ##GAPS
 # gaps inner 10px
 
+##COLOR VARS
+
+set $background 
+
+set $primary
+
+set $inactive #ffffff
+set $dead
+set $urgent
+
+
 ##COLORS
 # class                 border  backgr. text    indicator child_border
-client.focused          #546cf0 #546cf0 #ffffff #7aa2f7   #7aa2f7
-client.focused_inactive #546cf0 #546cf0 #ffffff #7aa2f7   #7aa2f7
+client.focused          #7aa2f7 #7aa2f7 #11111b #7aa2f7   #7aa2f7
+client.focused_inactive #11111b #11111b #ffffff #7aa2f7   #11111b
 client.unfocused        #11111b #11111b #565f89 #292d2e   #11111b
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
