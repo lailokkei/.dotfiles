@@ -8,11 +8,11 @@
     // "glassit.alpha": 240,
     // "glassit-linux.opacity": 70,
     
-    "workbench.colorTheme": "Tokyo Night",
-
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    
     "workbench.colorCustomizations": {
         "[Tokyo Night]": {
-            // "editor.background": "#121219",
+            "editor.background": "#121219",
             // "activityBar.background": "#0e0e11",
             // "sideBar.background": "#0e0e11",     
             // "editorGroupHeader.tabsBackground": "#0e0e11",
@@ -24,7 +24,8 @@
         },
 
         "[Gruvbox Dark Hard]": {
-            "editor.background": "#1D2122"
+            "editor.background": "#151819"
+            // "editor.background": "#1D2021"
         }
     },
     "terminal.integrated.defaultProfile.linux": "zsh",

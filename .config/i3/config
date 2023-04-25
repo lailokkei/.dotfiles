@@ -42,10 +42,10 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left 
@@ -66,7 +66,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -143,10 +143,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -168,8 +168,7 @@ bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+c exec code
 
 ##EXECS
-# exec_always feh --bg-scale Pictures/95166362_p0_master1200.jpg
-exec_always --no-startup-id feh --bg-fill Pictures/wallhaven-l315vy.png
+exec_always --no-startup-id feh --bg-fill Pictures/1677161820629202.jpg
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -182,37 +181,28 @@ exec --no-startup-id dunst
 ##authentication agent
 exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 
-default_border pixel 2
+default_border pixel 3
 default_floating_border pixel 0
 
 smart_borders on
 
 ##GAPS
-gaps inner 14px
-
+gaps inner 12px
+# gaps outer 14px
 ##COLOR VARS
 
 ##COLORS
 # class                 border  backgr. text    indicator child_border
-client.focused          #7aa2f7 #7aa2f7 #11111b #7aa2f7   #7aa2f7
-client.focused_inactive #11111b #11111b #565f89 #11111b   #11111b
-client.unfocused        #11111b #11111b #565f89 #11111b   #11111b
+client.focused          #A9B665 #A9B665 #1D2021CC #A9B665   #A9B665
+client.focused_inactive #1D2021CC #1D2021CC #928374 #1D2021CC   #1D2021CC
+client.unfocused        #1D2021CC #1D2021CC #928374 #1D2021CC   #1D2021CC
 client.urgent           #f7768e #f7768e #11111b #f7768e   #f7768e
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #7aa2f7
 
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-
-# bar {
-#         status_command i3status
-# }
+title_align left
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
-
-
-# exec discord
