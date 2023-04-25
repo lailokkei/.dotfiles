@@ -1,16 +1,34 @@
 {
     "window.zoomLevel": 1,
     "editor.minimap.enabled": false,
+    "vim.smartRelativeLine": true,
 
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "window.menuBarVisibility": "toggle",
-    "glassit.alpha": 255,
+    // "glassit.alpha": 240,
+    // "glassit-linux.opacity": 70,
+    
     "workbench.colorTheme": "Tokyo Night",
 
     "workbench.colorCustomizations": {
         "[Tokyo Night]": {
-            "editor.background": "#11111b"
+            // "editor.background": "#121219",
+            // "activityBar.background": "#0e0e11",
+            // "sideBar.background": "#0e0e11",     
+            // "editorGroupHeader.tabsBackground": "#0e0e11",
+            // "tab.activeBackground": "#0e0e11",
+            // "tab.inactiveBackground": "#0e0e11",
+            // "statusBar.background": "#000000",
+            // "panel.background": "#0e0e11",
+            // "terminal.background": "#0e0e11"
+        },
+
+        "[Gruvbox Dark Hard]": {
+            "editor.background": "#1D2122"
         }
     },
-    "terminal.integrated.defaultProfile.linux": "zsh"
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "glassit.alpha": 255,
+
+    
 }
