@@ -54,10 +54,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -66,7 +66,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+g split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -133,7 +133,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+m exec "i3 exit"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -166,6 +166,7 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 bindsym $mod+c exec code
+bindsym $mod+Shift+s exec flameshot gui
 
 ##EXECS
 exec_always --no-startup-id feh --bg-fill Pictures/1677161820629202.jpg
@@ -181,25 +182,31 @@ exec --no-startup-id dunst
 ##authentication agent
 exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 
+exec --no-startup-id xmousepasteblock 
+
+for_window [class=".*"] border pixel 3
 default_border pixel 3
-default_floating_border pixel 0
+default_floating_border pixel 3
 
 smart_borders on
 
 ##GAPS
-gaps inner 12px
+gaps inner 8px
 # gaps outer 14px
+
 ##COLOR VARS
+set $select #8ec07c
+set $background #1D2021CC
 
 ##COLORS
 # class                 border  backgr. text    indicator child_border
-client.focused          #A9B665 #A9B665 #1D2021CC #A9B665   #A9B665
-client.focused_inactive #1D2021CC #1D2021CC #928374 #1D2021CC   #1D2021CC
-client.unfocused        #1D2021CC #1D2021CC #928374 #1D2021CC   #1D2021CC
+client.focused          $select $select #1D2021CC $select $select 
+client.focused_inactive #1D2021CC #1D2021CC #928374 #1D2021CC   #1D202100
+client.unfocused        #1D2021CC #1D2021CC #928374 #1D2021CC   #1D202100
 client.urgent           #f7768e #f7768e #11111b #f7768e   #f7768e
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# client.placeholder      #ff002f #ff002f #ffffff #ff002f   #ff002f
 
-client.background       #7aa2f7
+# client.background       #000000
 
 title_align left
 

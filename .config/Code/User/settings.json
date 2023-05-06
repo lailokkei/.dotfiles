@@ -1,14 +1,10 @@
 {
     "window.zoomLevel": 1,
     "editor.minimap.enabled": false,
-    "vim.smartRelativeLine": true,
+    // "vim.smartRelativeLine": true,
 
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "window.menuBarVisibility": "toggle",
-    // "glassit.alpha": 240,
-    // "glassit-linux.opacity": 70,
-    
-    "workbench.colorTheme": "Gruvbox Dark Hard",
     
     "workbench.colorCustomizations": {
         "[Tokyo Night]": {
@@ -24,12 +20,22 @@
         },
 
         "[Gruvbox Dark Hard]": {
-            "editor.background": "#151819"
+            "editor.background": "#1d2021"
             // "editor.background": "#1D2021"
+        },
+
+        "[Gruvbox Material Dark]": {
+            "editor.background": "#1d2021"
         }
     },
     "terminal.integrated.defaultProfile.linux": "zsh",
-    "glassit.alpha": 255,
-
+    "glassit.alpha": 240,
+    "editor.lineNumbers": "relative",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "gruvboxMaterial.darkContrast": "hard",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.activityBar.visible": false,
     
 }
