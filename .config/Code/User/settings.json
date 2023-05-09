@@ -1,6 +1,20 @@
 {
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-b>": false
+    },
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<C-u>"],
+            "after": ["<C-u>", "zz"],
+            "before": ["<C-d>"],
+            "after": ["<C-d>", "zz"]
+        }
+    ],    
+
     "editor.minimap.enabled": false,
-    // "vim.smartRelativeLine": true,
 
     "editor.fontFamily": "JetBrainsMono Nerd Font",
     "window.menuBarVisibility": "toggle",
@@ -37,5 +51,4 @@
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.colorTheme": "Gruvbox Dark Hard",
     "window.zoomLevel": 1,
-    "workbench.activityBar.visible": false,
 }
