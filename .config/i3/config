@@ -195,14 +195,14 @@ gaps inner 8px
 # gaps outer 14px
 
 ##COLOR VARS
-set $select #8ec07c
+set $select #a9b665
 set $background #1D2021CC
 
 ##COLORS
 # class                 border  backgr. text    indicator child_border
 client.focused          $select $select #1D2021CC $select $select 
-client.focused_inactive #1D2021CC #1D2021CC #928374 #1D2021CC   #1D202100
-client.unfocused        #1D2021CC #1D2021CC #928374 #1D2021CC   #1D202100
+client.focused_inactive #1D2021CC #1D2021CC #928374 #1D2021CC   #1D2021
+client.unfocused        #1D2021CC #1D2021CC #928374 #1D2021CC   #1D2021
 client.urgent           #f7768e #f7768e #11111b #f7768e   #f7768e
 # client.placeholder      #ff002f #ff002f #ffffff #ff002f   #ff002f
 

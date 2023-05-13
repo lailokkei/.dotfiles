@@ -2,15 +2,19 @@
     "vim.handleKeys": {
         "<C-d>": true,
         "<C-s>": false,
+        "<C-c>": false,
         "<C-z>": false,
-        "<C-b>": false
+        "<C-b>": false,
+        "<C-w>": false,
     },
-    "vim.insertModeKeyBindings": [
+    "vim.normalModeKeyBindings": [
         {
             "before": ["<C-u>"],
-            "after": ["<C-u>", "zz"],
+            "after": ["<C-u>", "z","z"]
+        },
+        {
             "before": ["<C-d>"],
-            "after": ["<C-d>", "zz"]
+            "after": ["<C-d>", "z", "z"],
         }
     ],    
 
@@ -33,8 +37,11 @@
         },
 
         "[Gruvbox Dark Hard]": {
-            // "editor.background": "#1c2024"
-            // "editor.background": "#1D2021"
+            // "editor.background": "#15181c"
+            "sideBar.border": "#00000000",
+            "activityBar.border": "#00000000",
+            // "tab.border": "#ff00000",
+            // "tab.activeBorder": "#ff0000"
         },
 
         "[Gruvbox Material Dark]": {
