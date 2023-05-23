@@ -29,6 +29,7 @@ schemes:
     primary:
       # hard contrast: background = '0x1d2021'
       background: '0x191c1f'
+      # background: '0x000000'
       # soft contrast: background = '0x32302f'
       foreground: '0xebdbb2'
 
@@ -237,7 +238,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 8.0
+  size: 8
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
