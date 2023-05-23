@@ -169,12 +169,11 @@ bindsym $mod+c exec code
 bindsym $mod+Shift+s exec flameshot gui
 
 ##EXECS
-exec_always --no-startup-id feh --bg-fill Pictures/1677161820629202.jpg
-
+exec_always --no-startup-id feh --bg-fill Pictures/wall_1.jpg
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id picom
+# exec --no-startup-id picom
 
 #notification daemon
 exec --no-startup-id dunst
@@ -182,20 +181,18 @@ exec --no-startup-id dunst
 ##authentication agent
 exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 
-exec --no-startup-id xmousepasteblock 
-
-for_window [class=".*"] border pixel 3
-default_border pixel 3
-default_floating_border pixel 3
+for_window [class=".*"] border pixel 2
+default_border pixel 2
+default_floating_border pixel 2
 
 smart_borders on
 
 ##GAPS
-gaps inner 8px
+gaps inner 0px
 # gaps outer 14px
 
 ##COLOR VARS
-set $select #a9b665
+set $select #fb4934
 set $background #1D2021CC
 
 ##COLORS
