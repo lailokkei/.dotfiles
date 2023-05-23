@@ -21,7 +21,7 @@
 
     "editor.minimap.enabled": false,
 
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontFamily": "JetBrainsMonoNL Nerd Font",
     "window.menuBarVisibility": "toggle",
     
     "workbench.colorCustomizations": {
@@ -37,11 +37,12 @@
         },
         
         "[Gruvbox Dark Hard]": {
-            "editor.background": "#1a1b1d",
+            "editor.background": "#151518",
             "sideBar.border": "#00000000",
             "activityBar.border": "#00000000",
             "statusBar.border": "#00000000",
             "statusBar.background": "#111314",
+            "statusBar.noFolderBackground": "#111314",
             "editorGroupHeader.border": "#1d2021",
             // "tab.border": "#ff00000",
             "breadcrumb.focusForeground": "#ff0000",
@@ -65,5 +66,6 @@
     },
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.colorTheme": "Gruvbox Dark Hard",
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
+    "window.restoreWindows": "none"
 }
