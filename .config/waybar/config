@@ -1,0 +1,65 @@
+{
+    "layer": "top",
+    "modules-left": ["wlr/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["backlight", "pulseaudio", "battery", "network"],
+    "wlr/workspaces": {
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": [],
+        },
+
+        "sort-by-number": true
+    },
+
+    "hyprland/window": {
+    //    "format":,
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["󰕾"]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "network": {
+     //   "interface": "wlp2s0",
+        "format": "{ifname}",
+        "format-wifi": "󰖩 {essid}",
+        "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+        "format-disconnected": "", //An empty format will hide the module.
+        "max-length": 50
+    },
+
+    "clock": {
+        "interval": 60,
+        "format": "{:%a, %d %b, %H:%M}",
+        "max-length": 25
+    }
+
+}
