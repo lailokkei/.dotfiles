@@ -1,4 +1,1 @@
-require("idfk")
-
-require('dap-go').setup()
-
+require("core")

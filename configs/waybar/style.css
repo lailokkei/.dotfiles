@@ -5,18 +5,22 @@
 }
 
 window#waybar{
-    background-color: rgba(26, 27, 31, 0.887);
+    background-color: rgba(21, 23, 26, 0.85);
     color: #fbf1c7;
 }
 
 
 #workspaces button{
     color: #fbf1c7;
-    padding: 4px 10px
+    padding: 4px 8px
 }
 
 #workspaces button.active{
     color: #fabd2f;
+}
+
+#workspaces button.urgent{
+    color: #fb4934;
 }
 
 #workspaces button.persistent{

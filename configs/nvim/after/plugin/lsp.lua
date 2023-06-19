@@ -12,7 +12,23 @@ lsp.ensure_installed({
   'lua_ls',
 })
 
+local lspconfig = require('lspconfig')
+
 -- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
+
+lspconfig.gopls.setup {
+    analyses = {
+        unusedparams = true,
+    },
+}
 
 lsp.setup()
+
+local cmp = require('cmp')
+
+cmp.setup({
+  mapping = {
+    ['<CR>'] = cmp.mapping.confirm({select = true}),
+  }
+})
