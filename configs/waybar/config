@@ -1,8 +1,27 @@
+// -*- mode: json -*-
+
 {
     "layer": "top",
-    "modules-left": ["wlr/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["backlight", "pulseaudio", "battery", "network"],
+    "modules-left": [
+        "custom/open",
+        "wlr/workspaces",
+        "custom/close",
+        ],
+    "modules-center": ["custom/open", "clock", "custom/close"],
+    "modules-right": [
+        "custom/open",
+        "backlight",
+        "custom/close",
+        "custom/open",
+        "pulseaudio",
+        "custom/close",
+        "custom/open",
+        "battery",
+        "custom/close",
+        "custom/open",
+        "network",
+        "custom/close",
+        ],
     "wlr/workspaces": {
         "persistent_workspaces": {
             "1": [],
@@ -19,9 +38,17 @@
 
         "sort-by-number": true
     },
+    
+    "custom/open": {
+        "format": "[",
+    },
+
+    "custom/close": {
+        "format": "]",
+    },
 
     "hyprland/window": {
-    //    "format":,
+    //    "format": "{",
     },
 
     "backlight": {
