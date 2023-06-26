@@ -62,7 +62,9 @@ local plugins = {
     },
 
     'mfussenegger/nvim-dap',
+    "rcarriga/nvim-dap-ui",
     'leoluz/nvim-dap-go',
+
     'elkowar/yuck.vim',
     'norcalli/nvim-colorizer.lua',
 
@@ -73,7 +75,11 @@ local plugins = {
         end
     },
 
-    'mfussenegger/nvim-dap',
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        opts = {} -- this is equalent to setup({}) function
+    },
 }
 
 require("lazy").setup(plugins)
