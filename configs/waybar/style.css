@@ -1,7 +1,7 @@
 * {
     font-family: JetBrainsMono Nerd Font ;
     font-weight: bold;
-    font-size: 19px;
+    font-size: 18px;
     padding: 0;
     min-height: 0;
     margin: 0px;
@@ -18,7 +18,7 @@ window#waybar{
 #pulseaudio,
 #battery,
 #network{
-    background-color: rgba(21, 23, 26, 0.85);
+    background-color: rgba(21, 23, 26, 0.80);
     margin: 10px 10px 0px;
     border-radius: 7px;
     /* padding: 0px 8px; */
@@ -48,7 +48,8 @@ window#waybar{
 
 #workspaces button.active{
     color: rgba(21, 23, 26, 0.85);
-    background-color: #fabd2f;
+    /* background-color: #fabd2f; */
+    background-color: #ebdbb2;
 }
 
 #workspaces button.urgent{

@@ -22,6 +22,7 @@
     "editor.minimap.enabled": false,
 
     "editor.fontFamily": "JetBrainsMonoNL Nerd Font",
+    "editor.fontSize": 14,
     "window.menuBarVisibility": "toggle",
     
     "workbench.colorCustomizations": {
@@ -66,6 +67,6 @@
     },
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.colorTheme": "Gruvbox Dark Hard",
-    "window.zoomLevel": 1,
-    "window.restoreWindows": "none"
+    "window.restoreWindows": "none",
+    "window.zoomLevel": 1
 }
