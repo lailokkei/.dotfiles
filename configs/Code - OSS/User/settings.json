@@ -57,7 +57,6 @@
             // "editor.background": "#1d2021"
         }
     },
-    "breadcrumbs.enabled": false,
     "terminal.integrated.defaultProfile.linux": "zsh",
     "glassit.alpha": 255,
     "editor.lineNumbers": "relative",
@@ -66,7 +65,6 @@
         "editor.formatOnType": true
     },
     "security.workspace.trust.untrustedFiles": "open",
-    "workbench.colorTheme": "Gruvbox Dark Hard",
     "window.restoreWindows": "none",
     "window.zoomLevel": 1
 }

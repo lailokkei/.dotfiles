@@ -28,6 +28,9 @@ local plugins = {
     },
 
     { "ellisonleao/gruvbox.nvim", priority = 1000 },
+    "rebelot/kanagawa.nvim",
+    "nyngwang/nvimgelion",
+
 
     'nvim-lua/plenary.nvim',
     'ThePrimeagen/harpoon',

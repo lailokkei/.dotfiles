@@ -20,7 +20,7 @@ window#waybar{
 #network{
     background-color: rgba(21, 23, 26, 0.80);
     margin: 10px 10px 0px;
-    border-radius: 7px;
+    border-radius: 5px;
     /* padding: 0px 8px; */
     padding: 4px 12px;
 }
@@ -42,7 +42,7 @@ window#waybar{
 }
 
 #workspaces button{
-    color: #ebdbb2;
+    color: #fbf1c7;
     padding: 0px 8px;
 }
 
