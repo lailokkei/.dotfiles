@@ -9,7 +9,7 @@
 
 window#waybar{
     background-color: transparent;
-    color: #fbf1c7;
+    color: #ebdbb2;
 }
 
 #workspaces,
@@ -18,11 +18,14 @@ window#waybar{
 #pulseaudio,
 #battery,
 #network{
-    background-color: rgba(21, 23, 26, 0.80);
+    background-color: rgba(22, 24, 28, 0.80);
     margin: 10px 10px 0px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     /* padding: 0px 8px; */
     padding: 4px 12px;
+    /* border-width: 2px; */
+    /* border-style: solid; */
+    /* border-color: #3c3836; */
 }
 
 #workspaces {
@@ -42,7 +45,7 @@ window#waybar{
 }
 
 #workspaces button{
-    color: #fbf1c7;
+    color: #ebdbb2;
     padding: 0px 8px;
 }
 
@@ -50,6 +53,7 @@ window#waybar{
     color: rgba(21, 23, 26, 0.85);
     /* background-color: #fabd2f; */
     background-color: #ebdbb2;
+    border-radius: 0;
 }
 
 #workspaces button.urgent{

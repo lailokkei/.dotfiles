@@ -106,3 +106,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 bindkey '^H' backward-kill-word
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/toodemhard/google-cloud-sdk/path.zsh.inc' ]; then . '/home/toodemhard/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/toodemhard/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/toodemhard/google-cloud-sdk/completion.zsh.inc'; fi

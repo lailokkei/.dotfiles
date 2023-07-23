@@ -83,6 +83,7 @@ local plugins = {
         event = "InsertEnter",
         opts = {} -- this is equalent to setup({}) function
     },
+    'windwp/nvim-ts-autotag',
 }
 
 require("lazy").setup(plugins)
