@@ -28,9 +28,6 @@ local plugins = {
     },
 
     { "ellisonleao/gruvbox.nvim", priority = 1000 },
-    "rebelot/kanagawa.nvim",
-    "nyngwang/nvimgelion",
-
 
     'nvim-lua/plenary.nvim',
     'ThePrimeagen/harpoon',
@@ -84,6 +81,11 @@ local plugins = {
         opts = {} -- this is equalent to setup({}) function
     },
     'windwp/nvim-ts-autotag',
+
+    {
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
 }
 
 require("lazy").setup(plugins)
