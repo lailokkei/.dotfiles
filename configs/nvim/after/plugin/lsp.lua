@@ -4,7 +4,6 @@ lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
 end)
 
-
 lsp.ensure_installed({
     'tsserver',
     'eslint',
@@ -12,6 +11,17 @@ lsp.ensure_installed({
     'gopls',
     'lua_ls',
 })
+
+require('lspconfig').html.setup {
+    init_options = {
+        configurationSection = { "html", "css", "javascript" },
+        embeddedLanguages = {
+            css = true,
+            javascript = true
+        },
+        provideFormatter = true
+    }
+}
 
 lsp.format_on_save({
     format_opts = {

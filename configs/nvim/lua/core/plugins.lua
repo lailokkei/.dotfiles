@@ -29,22 +29,15 @@ local plugins = {
 
     { "ellisonleao/gruvbox.nvim", priority = 1000 },
 
-    'nvim-lua/plenary.nvim',
     'ThePrimeagen/harpoon',
-    'mbbill/undotree',
 
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
         dependencies = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' }, -- Required
-            {                            -- Optional
-                'williamboman/mason.nvim',
-                build = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
-            },
+            { 'neovim/nvim-lspconfig' },             -- Required
+            { 'williamboman/mason.nvim' },           -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
@@ -85,7 +78,7 @@ local plugins = {
     {
         "nvim-telescope/telescope-file-browser.nvim",
         dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-    }
+    },
 }
 
 require("lazy").setup(plugins)
