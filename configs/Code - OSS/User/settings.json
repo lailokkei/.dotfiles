@@ -67,5 +67,8 @@
     "security.workspace.trust.untrustedFiles": "open",
     "window.restoreWindows": "none",
     "window.zoomLevel": 1,
-    "svelte.enable-ts-plugin": true
+    "svelte.enable-ts-plugin": true,
+    "[html]": {
+        "editor.suggest.insertMode": "replace"
+    }
 }
