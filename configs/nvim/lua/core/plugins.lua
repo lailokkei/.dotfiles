@@ -27,7 +27,7 @@ local plugins = {
         end,
     },
 
-    { "ellisonleao/gruvbox.nvim", priority = 1000 },
+    { "ellisonleao/gruvbox.nvim",           priority = 1000 },
 
     'ThePrimeagen/harpoon',
 
@@ -79,6 +79,8 @@ local plugins = {
         "nvim-telescope/telescope-file-browser.nvim",
         dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     },
+
+    { "lukas-reineke/indent-blankline.nvim" },
 }
 
 require("lazy").setup(plugins)
