@@ -11,9 +11,13 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-autoload -Uz compinit
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
 compinit
+_compoptions+=(globdots)
 
+bindkey -M menuselect '^[[Z' reverse-menu-complete
 bindkey '^H' backward-kill-word
 
 alias ls='ls --color=auto'
