@@ -10,6 +10,7 @@ fi
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH=$PATH:~/zig
 
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -19,6 +20,8 @@ _compoptions+=(globdots)
 
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 bindkey '^H' backward-kill-word
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -30,3 +33,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
