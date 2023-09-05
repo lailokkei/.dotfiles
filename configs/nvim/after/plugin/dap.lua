@@ -1,4 +1,6 @@
 local dap = require("dap")
+local dapui = require("dapui")
+dapui.setup()
 
 vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
 vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
@@ -16,6 +18,16 @@ vim.keymap.set("n", "<leader>dus", function()
     my_sidebar.open()
 end)
 
+dap.listeners.after.event_initialized["dapui_config"] = function()
+    dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+    dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+    dapui.close()
+end
+
 dap.adapters.delve = {
     type = 'server',
     port = '${port}',
@@ -24,6 +36,7 @@ dap.adapters.delve = {
         args = { 'dap', '-l', '127.0.0.1:${port}' },
     }
 }
+
 
 -- https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md
 dap.configurations.go = {
@@ -48,4 +61,30 @@ dap.configurations.go = {
         mode = "test",
         program = "./${relativeFileDirname}"
     }
+}
+
+dap.adapters.codelldb = {
+    type = 'server',
+    port = "${port}",
+    executable = {
+        -- CHANGE THIS to your path!
+        command = '/home/toodemhard/.local/share/nvim/mason/packages/codelldb/codelldb',
+        args = { "--port", "${port}" },
+
+        -- On windows you may have to uncomment this:
+        -- detached = false,
+    }
+}
+
+dap.configurations.cpp = {
+    {
+        name = "Launch file",
+        type = "codelldb",
+        request = "launch",
+        program = function()
+            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+    },
 }

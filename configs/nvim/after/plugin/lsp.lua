@@ -8,7 +8,6 @@ lsp.ensure_installed({
     'tsserver',
     'eslint',
     'rust_analyzer',
-    'gopls',
     'lua_ls',
 })
 
@@ -27,11 +26,7 @@ lsp.setup()
 local cmp = require('cmp')
 
 cmp.setup({
-    mapping = cmp.mapping.preset.insert {
-        ["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
-    },
-    preselect = 'item',
-    completion = {
-        completeopt = 'menu,menuone,noinsert'
-    },
+    mapping = {
+        ['<CR>'] = cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace }),
+    }
 })
