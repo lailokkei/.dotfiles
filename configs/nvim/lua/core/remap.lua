@@ -21,4 +21,4 @@ vim.keymap.set("n", "Y", "yy")
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
-vim.keymap.set("i", "<C-H>", "<C-W>")
+vim.keymap.set({ "i", "c" }, "<C-H>", "<C-W>")
