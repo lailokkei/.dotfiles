@@ -13,10 +13,6 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $refresh_i3status
@@ -28,7 +24,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -37,8 +33,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+r exec --no-startup-id rofi -show run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
+# There also is i3-dmenu-desktop which only displays applications shipping a
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
@@ -79,6 +75,8 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
+
+workspace_layout tabbed
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
@@ -134,6 +132,9 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+m exec "i3 exit"
+bindsym $mod+Shift+i exec "systemctl reboot"
+bindsym $mod+Shift+o exec "systemctl poweroff"
+bindsym $mod+Shift+p exec "systemctl suspend"
 
 # resize window (you can also use the mouse for that)
 # mode "resize" {
@@ -165,11 +166,10 @@ bindsym $mod+m exec "i3 exit"
 bindsym $mod+Tab workspace next 
 bindsym $mod+Shift+Tab workspace prev
 
-bindsym $mod+c exec code
 bindsym $mod+Shift+s exec flameshot gui
 
 ##EXECS
-exec_always --no-startup-id feh --bg-fill Pictures/walls/wall_1.jpg
+exec_always --no-startup-id feh --bg-fill Pictures/walls/tokyo_c.jpg
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
@@ -181,18 +181,16 @@ exec --no-startup-id dunst
 ##authentication agent
 exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 
-# for_window [class=".*"] border pixel 2
-# default_border pixel 2
+default_border pixel 2
 # default_floating_border pixel 2
-#
-# smart_borders on
+# smart_borders off
 
 ##GAPS
-gaps inner 0px
+# gaps inner 0px
 # gaps outer 14px
 
 ##COLOR VARS
-set $select #fb4934
+set $select #ebdbb2
 set $background #1D2021CC
 
 ##COLORS
@@ -200,7 +198,7 @@ set $background #1D2021CC
 client.focused          $select $select #1D2021CC $select $select 
 client.focused_inactive #1D2021CC #1D2021CC #928374 #1D2021CC   #1D2021
 client.unfocused        #1D2021CC #1D2021CC #928374 #1D2021CC   #1D2021
-client.urgent           #f7768e #f7768e #11111b #f7768e   #f7768e
+client.urgent           #fb4934 #fb4934 #11111b #fb4934   #fb4934
 # client.placeholder      #ff002f #ff002f #ffffff #ff002f   #ff002f
 
 # client.background       #000000
@@ -208,5 +206,5 @@ client.urgent           #f7768e #f7768e #11111b #f7768e   #f7768e
 title_align left
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
