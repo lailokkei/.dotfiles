@@ -22,7 +22,7 @@ window#waybar{
     /* margin: 10px 10px; */
     /* border-radius: 5px; */
     /* padding: 0px 8px; */
-    padding: 4px 12px;
+    padding: 4px 0px;
     /* border-width: 2px; */
     /* border-style: solid; */
     /* border-color: #3c3836; */
@@ -36,17 +36,17 @@ window#waybar{
 #pulseaudio,
 #battery,
 #network {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-#network{
-    margin-right: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 #workspaces button{
     color: #ebdbb2;
     padding: 0px 8px;
+}
+
+#workspaces button.persistent{
+    color: #928374;
 }
 
 #workspaces button.active{
@@ -60,9 +60,5 @@ window#waybar{
     color: #fb4934;
 }
 
-/* #workspaces button.persistent{ */
-/*     background-color: #ff0000; */
-/*     color: #ebdbb2; */
-/* } */
 
 
