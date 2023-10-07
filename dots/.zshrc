@@ -10,8 +10,7 @@ fi
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH=$PATH:~/zig
-
+export PATH=$PATH:/usr/local/zig
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -27,6 +26,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/projects/go/imageboard/url.env
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,37 +1,79 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 schemes:
-  gruvbox: &gruvbox
-    # Default colors
+  rosepine: &rosepine
     primary:
-      # hard contrast: background = '0x1d2021'
-      background: '0x16181c'
-      # background: '0x14161a'
-      foreground: '0xebdbb2'
-
-    # Normal colors
+      background: "0x191724"
+      foreground: "0xe0def4"
+    cursor:
+      text: "0xe0def4"
+      cursor: "0x524f67"
+    vi_mode_cursor:
+      text: "0xe0def4"
+      cursor: "0x524f67"
+    line_indicator:
+      foreground: None
+      background: None
+    selection:
+      text: "0xe0def4"
+      background: "0x403d52"
     normal:
-      black:   '0x928374'
-      red:     '0xfb4934'
-      green:   '0xb8bb26'
-      yellow:  '0xfabd2f'
-      blue:    '0x83a598'
-      magenta: '0xd3869b'
-      cyan:    '0x8ec07c'
-      white:   '0xebdbb2'
-
-    # Bright colors
+      black: "0x26233a"
+      red: "0xeb6f92"
+      green: "0x31748f"
+      yellow: "0xf6c177"
+      blue: "0x9ccfd8"
+      magenta: "0xc4a7e7"
+      cyan: "0xebbcba"
+      white: "0xe0def4"
     bright:
-      black:   '0x928374'
-      red:     '0xfb4934'
-      green:   '0xb8bb26'
-      yellow:  '0xfabd2f'
-      blue:    '0x83a598'
-      magenta: '0xd3869b'
-      cyan:    '0x8ec07c'
-      white:   '0xebdbb2'
+      black: "0x6e6a86"
+      red: "0xeb6f92"
+      green: "0x31748f"
+      yellow: "0xf6c177"
+      blue: "0x9ccfd8"
+      magenta: "0xc4a7e7"
+      cyan: "0xebbcba"
+      white: "0xe0def4"
+    hints:
+      start:
+        foreground: "#908caa"
+        background: "#1f1d2e"
+      end:
+        foreground: "#6e6a86"
+        background: "#1f1d2e"
 
-colors: *gruvbox
+gruvbox: &gruvbox
+      # Default colors
+      primary:
+        # hard contrast: background = '0x1d2021'
+        background: '0x16181c'
+        # background: '0x14161a'
+        foreground: '0xebdbb2'
+
+      # Normal colors
+      normal:
+        black:   '0x928374'
+        red:     '0xfb4934'
+        green:   '0xb8bb26'
+        yellow:  '0xfabd2f'
+        blue:    '0x83a598'
+        magenta: '0xd3869b'
+        cyan:    '0x8ec07c'
+        white:   '0xebdbb2'
+
+      # Bright colors
+      bright:
+        black:   '0x928374'
+        red:     '0xfb4934'
+        green:   '0xb8bb26'
+        yellow:  '0xfabd2f'
+        blue:    '0x83a598'
+        magenta: '0xd3869b'
+        cyan:    '0x8ec07c'
+        white:   '0xebdbb2'
+
+colors: *rosepine
 
 env:
   TERM: xterm-256color
@@ -48,14 +90,14 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-   x: 10
-   y: 10
+   x: 20
+   y: 20
    
   # Background opacity
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.85
+  opacity: 1
  
   # Window title
   #title: Alacritty
@@ -89,7 +131,7 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: monospace
-      family: JetBrainsMono Nerd Font
+      family: JetBrainsMonoNL Nerd Font
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
