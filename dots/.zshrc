@@ -11,6 +11,7 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH=$PATH:/usr/local/zig
+export PATH=$PATH:$HOME/.dotfiles/cmd
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -21,6 +22,7 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete
 bindkey '^H' backward-kill-word
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
+bindkey -s ^f "tmux-sessionizer\n"
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
