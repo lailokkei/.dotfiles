@@ -15,9 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.1',
-        -- or                            , branch = '0.1.x',
-        dependencies = { { 'nvim-lua/plenary.nvim' } }
+        tag = '0.1.4',
+        -- or                              , branch = '0.1.x',
+        dependencies = { 'nvim-lua/plenary.nvim' }
     },
     {
         'nvim-treesitter/nvim-treesitter',
@@ -75,12 +75,13 @@ local plugins = {
     },
     'windwp/nvim-ts-autotag',
 
-    {
-        "nvim-telescope/telescope-file-browser.nvim",
-        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-    },
-
     { "lukas-reineke/indent-blankline.nvim" },
 }
 
-require("lazy").setup(plugins)
+local opts = {
+    ui = {
+        border = "rounded",
+    }
+}
+
+require("lazy").setup(plugins, opts)
