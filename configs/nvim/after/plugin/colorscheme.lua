@@ -1,3 +1,6 @@
+-- require('rose-pine').setup()
+-- vim.cmd('colorscheme rose-pine')
+
 -- setup must be called before loading the colorscheme
 -- Default options:
 require("gruvbox").setup({

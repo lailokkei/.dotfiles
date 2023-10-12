@@ -26,8 +26,12 @@ local plugins = {
             ts_update()
         end,
     },
-
-    { "ellisonleao/gruvbox.nvim",           priority = 1000 },
+    {
+        'stevearc/oil.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+    { "ellisonleao/gruvbox.nvim", priority = 1000 },
+    { 'rose-pine/neovim',         name = 'rose-pine' },
 
     'ThePrimeagen/harpoon',
 
@@ -51,7 +55,7 @@ local plugins = {
 
     {
         'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true }
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
 
     'mfussenegger/nvim-dap',

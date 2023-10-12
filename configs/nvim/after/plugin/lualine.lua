@@ -26,7 +26,7 @@ custom_gruvbox.replace.b.bg = '#3c3836'
 require('lualine').setup {
     options = {
         icons_enabled = true,
-        theme = custom_gruvbox,
+        theme = 'auto',
         -- component_separators = { left = '', right = '' },
         -- section_separators = { left = '', right = '' },
 
