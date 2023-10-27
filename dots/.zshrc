@@ -24,7 +24,7 @@ bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
 bindkey -s ^f "tmux-sessionizer\n"
 
-set -o ignoreeof
+# set -o ignoreeof
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
