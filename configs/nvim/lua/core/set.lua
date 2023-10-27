@@ -23,3 +23,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
 
 vim.opt.termguicolors = true
+
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")

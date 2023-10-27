@@ -67,9 +67,10 @@ local plugins = {
 
     {
         'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
+        opts = {
+            -- add any options here
+        },
+        lazy = false,
     },
 
     {
@@ -80,6 +81,7 @@ local plugins = {
     'windwp/nvim-ts-autotag',
 
     { "lukas-reineke/indent-blankline.nvim" },
+    'eandrju/cellular-automaton.nvim',
 }
 
 local opts = {

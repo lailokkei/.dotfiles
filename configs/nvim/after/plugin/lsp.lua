@@ -30,3 +30,26 @@ cmp.setup({
         ['<CR>'] = cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace }),
     }
 })
+
+-- local lspconfig = require('lspconfig')
+-- lspconfig.rust_analyzer.setup {
+--     on_attach = function(client, bufnr)
+--         print("rust_analyzer")
+--     end,
+--     setting = {
+--         ['rust_analyzer'] = {
+--             diagnostics = {
+--             },
+--             definition = {
+--                 linkSupport = false
+--             }
+--             -- capabilities = {
+--             --     textDocument = {
+--             --         diagnostic = {
+--             --             dynamicRegistration = true
+--             --         }
+--             --     }
+--             -- }
+--         }
+--     }
+-- }
