@@ -88,3 +88,5 @@ dap.configurations.cpp = {
         stopOnEntry = false,
     },
 }
+
+dap.configurations.rust = dap.configurations.cpp

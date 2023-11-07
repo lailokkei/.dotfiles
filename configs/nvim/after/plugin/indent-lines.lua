@@ -1,2 +1,2 @@
-vim.cmd [[highlight IndentBlanklineChar guifg=#444444 gui=nocombine]]
+-- vim.cmd [[highlight IndentBlanklineChar guifg=#444444 gui=nocombine]]
 require("ibl").setup()

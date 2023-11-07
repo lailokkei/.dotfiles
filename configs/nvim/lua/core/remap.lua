@@ -1,6 +1,8 @@
 vim.g.mapleader = " "
 -- vim.keymap.set("n", "<leader>pv", vim.cmd("Oil"))
 
+vim.keymap.set({ "n", "v" }, "j", "gj")
+vim.keymap.set({ "n", "v" }, "k", "gk")
 vim.keymap.set("n", "<A-j>", "<cmd>m .+1<cr>==")
 vim.keymap.set("n", "<A-k>", "<cmd>m .-2<cr>==")
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")

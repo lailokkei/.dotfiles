@@ -11,7 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 local plugins = {
     {
         'nvim-telescope/telescope.nvim',
@@ -82,6 +81,20 @@ local plugins = {
 
     { "lukas-reineke/indent-blankline.nvim" },
     'eandrju/cellular-automaton.nvim',
+
+    {
+        "folke/zen-mode.nvim",
+        opts = {
+            window = {
+                width = 80,
+            },
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        },
+    },
+
+    'tpope/vim-fugitive',
 }
 
 local opts = {
