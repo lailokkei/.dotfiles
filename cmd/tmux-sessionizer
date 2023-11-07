@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
@@ -13,13 +14,15 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
+path=$(pwd)/$selected
+
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
+    tmux new-session -s $selected_name -c $path
     exit 0
 fi
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -s $selected_name -c $selected
+    tmux new-session -s $selected_name -c $path
     exit 0
 fi
 
