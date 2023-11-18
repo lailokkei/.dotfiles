@@ -95,6 +95,8 @@ local plugins = {
     },
 
     'tpope/vim-fugitive',
+    'lewis6991/gitsigns.nvim',
+    { "folke/neodev.nvim",                  opts = {} },
 }
 
 local opts = {
