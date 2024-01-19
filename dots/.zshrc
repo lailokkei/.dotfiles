@@ -9,6 +9,8 @@ fi
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH=$PATH:/usr/local/zig
 export PATH=$PATH:$HOME/.dotfiles/cmd
@@ -38,3 +40,6 @@ source ~/projects/go/imageboard/url.env
 # source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+
+# Created by `pipx` on 2024-01-11 09:58:29
+export PATH="$PATH:/home/toodemhard/.local/bin"

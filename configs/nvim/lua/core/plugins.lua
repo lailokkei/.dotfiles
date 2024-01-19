@@ -29,8 +29,10 @@ local plugins = {
         'stevearc/oil.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
+    { "catppuccin/nvim",          name = "catppuccin", priority = 1000 },
     { "ellisonleao/gruvbox.nvim", priority = 1000 },
     { 'rose-pine/neovim',         name = 'rose-pine' },
+    'Shatur/neovim-ayu',
 
     'ThePrimeagen/harpoon',
 
@@ -94,6 +96,7 @@ local plugins = {
         },
     },
 
+    'tpope/vim-sleuth',
     'tpope/vim-fugitive',
     'lewis6991/gitsigns.nvim',
     { "folke/neodev.nvim",                  opts = {} },

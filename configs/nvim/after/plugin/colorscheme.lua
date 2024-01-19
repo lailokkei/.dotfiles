@@ -3,28 +3,24 @@ require('rose-pine').setup({
 })
 -- vim.cmd('colorscheme rose-pine')
 
--- setup must be called before loading the colorscheme
--- Default options:
 require("gruvbox").setup({
-    undercurl = true,
-    underline = true,
-    bold = true,
-    italic = {
-        strings = false,
-        comments = false,
-        operators = false,
-        folds = false,
-    },
-    strikethrough = true,
-    invert_selection = false,
-    invert_signs = false,
-    invert_tabline = false,
-    invert_intend_guides = false,
-    inverse = true,    -- invert background for search, diffs, statuslines and errors
-    contrast = "hard", -- can be "hard", "soft" or empty string
-    palette_overrides = {},
-    overrides = {},
-    dim_inactive = false,
     transparent_mode = true,
 })
+
+require('ayu').setup({
+    overrides = {
+        -- Normal = { bg = "None" },
+        -- ColorColumn = { bg = "None" },
+        -- SignColumn = { bg = "None" },
+        -- Folded = { bg = "None" },
+        -- FoldColumn = { bg = "None" },
+        -- CursorLine = { bg = "None" },
+        -- CursorColumn = { bg = "None" },
+        -- WhichKeyFloat = { bg = "None" },
+        -- VertSplit = { bg = "None" },
+    },
+})
+
+
+
 vim.cmd("colorscheme gruvbox")
