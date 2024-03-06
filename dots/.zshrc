@@ -11,6 +11,8 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH=$PATH:/usr/local/zig
+export PATH=$PATH:/usr/local/nvim-linux64/bin
+export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.dotfiles/cmd
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -28,11 +30,10 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-source ~/projects/go/imageboard/url.env
 
+# source ~/projects/go/imageboard/url.env
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+# # source ~/Repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
