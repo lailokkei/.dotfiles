@@ -11,13 +11,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 local plugins = {
     {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.1',
-        -- or                            , branch = '0.1.x',
-        dependencies = { { 'nvim-lua/plenary.nvim' } }
+        tag = '0.1.4',
+        -- or                              , branch = '0.1.x',
+        dependencies = { 'nvim-lua/plenary.nvim' }
     },
     {
         'nvim-treesitter/nvim-treesitter',
@@ -26,8 +25,14 @@ local plugins = {
             ts_update()
         end,
     },
-
-    { "ellisonleao/gruvbox.nvim",           priority = 1000 },
+    {
+        'stevearc/oil.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+    { "catppuccin/nvim",          name = "catppuccin", priority = 1000 },
+    { "ellisonleao/gruvbox.nvim", priority = 1000 },
+    { 'rose-pine/neovim',         name = 'rose-pine' },
+    'Shatur/neovim-ayu',
 
     'ThePrimeagen/harpoon',
 
@@ -51,7 +56,7 @@ local plugins = {
 
     {
         'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true }
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
 
     'mfussenegger/nvim-dap',
@@ -63,9 +68,10 @@ local plugins = {
 
     {
         'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
+        opts = {
+            -- add any options here
+        },
+        lazy = false,
     },
 
     {
@@ -75,12 +81,31 @@ local plugins = {
     },
     'windwp/nvim-ts-autotag',
 
+    { "lukas-reineke/indent-blankline.nvim" },
+    'eandrju/cellular-automaton.nvim',
+
     {
-        "nvim-telescope/telescope-file-browser.nvim",
-        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+        "folke/zen-mode.nvim",
+        opts = {
+            window = {
+                width = 80,
+            },
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        },
     },
 
-    { "lukas-reineke/indent-blankline.nvim" },
+    'tpope/vim-sleuth',
+    'tpope/vim-fugitive',
+    'lewis6991/gitsigns.nvim',
+    { "folke/neodev.nvim",                  opts = {} },
 }
 
-require("lazy").setup(plugins)
+local opts = {
+    ui = {
+        border = "rounded",
+    }
+}
+
+require("lazy").setup(plugins, opts)

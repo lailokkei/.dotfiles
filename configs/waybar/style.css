@@ -1,6 +1,6 @@
 * {
-    font-family: JetBrainsMono Nerd Font ;
-    font-weight: bold;
+    font-family: JetBrainsMonoNL Nerd Font;
+    font-weight: normal;
     font-size: 18px;
     padding: 0;
     min-height: 0;
@@ -8,7 +8,7 @@
 }
 
 window#waybar{
-    background-color: transparent;
+    background-color: rgba(22,24,28,0);
     color: #ebdbb2;
 }
 
@@ -22,15 +22,15 @@ window#waybar{
     /* margin: 10px 10px; */
     /* border-radius: 5px; */
     /* padding: 0px 8px; */
-    padding: 4px 0px;
+    padding: 0px 0px;
     /* border-width: 2px; */
     /* border-style: solid; */
     /* border-color: #3c3836; */
 }
 
-#workspaces {
-    padding: 4px 4px;
-}
+/* #workspaces { */
+    /* padding: 4px 4px; */
+/* } */
 
 #backlight,
 #pulseaudio,
@@ -50,9 +50,10 @@ window#waybar{
 }
 
 #workspaces button.active{
-    color: rgba(0, 0, 0, 1);
-    /* background-color: #fabd2f; */
+    color: rgba(0, 0, 0, 50);
     background-color: #ebdbb2;
+    /* border: rgba(0,0,0,0) solid 2px; */
+    margin: 4px 4px;
     border-radius: 0;
 }
 
