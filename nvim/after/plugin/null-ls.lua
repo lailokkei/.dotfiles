@@ -4,15 +4,15 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
 	-- debug = true,
 	sources = {
-		null_ls.builtins.formatting.gofmt,
-		null_ls.builtins.formatting.goimports,
-		null_ls.builtins.formatting.rustfmt,
-		null_ls.builtins.formatting.clang_format,
+		-- null_ls.builtins.formatting.gofmt,
+		-- null_ls.builtins.formatting.goimports,
+		-- null_ls.builtins.formatting.rustfmt,
+		-- null_ls.builtins.formatting.clang_format,
 		-- null_ls.builtins.formatting.prettier,
 		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.formatting.prettierd.with({
-			filetypes = { "typescript", "javascript", "html" },
-		}),
+		-- null_ls.builtins.formatting.prettierd.with({
+		-- 	filetypes = { "typescript", "javascript", "html" },
+		-- }),
 	},
 
 	-- you can reuse a shared lspconfig on_attach callback here

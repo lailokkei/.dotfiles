@@ -5,9 +5,6 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.ensure_installed({
-	"tsserver",
-	"eslint",
-	"rust_analyzer",
 	"lua_ls",
 })
 
@@ -45,5 +42,6 @@ require("lspconfig").clangd.setup({
 	cmd = {
 		"clangd",
 		"--offset-encoding=utf-16",
+		"--query-driver=C:\\msys64\\mingw64\\bin\\c++.exe",
 	},
 })
