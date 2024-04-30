@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-
-DOTFILES_PATH=~/.dotfiles
-
-stow -R configs -d $DOTFILES_PATH -t ~/.config
-stow -R dots -d $DOTFILES_PATH -t ~/
