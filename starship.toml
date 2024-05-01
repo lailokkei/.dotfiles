@@ -1,0 +1,13 @@
+format = """
+[ ](bold green)\
+$directory\
+$git_branch\
+"""
+
+add_newline = false
+
+[directory]
+format = "[$path](cyan) "
+
+[git_branch]
+format = '[git:\([$branch](red)\) ](blue)'
