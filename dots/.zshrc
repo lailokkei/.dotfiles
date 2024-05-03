@@ -5,14 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH=$PATH:/usr/local/zig
+export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.dotfiles/cmd
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -32,7 +29,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-source ~/projects/go/imageboard/url.env
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -43,3 +39,13 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Created by `pipx` on 2024-01-11 09:58:29
 export PATH="$PATH:/home/toodemhard/.local/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/toodemhard/google-cloud-sdk/path.zsh.inc' ]; then . '/home/toodemhard/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/toodemhard/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/toodemhard/google-cloud-sdk/completion.zsh.inc'; fi
+
+# fnm
+export PATH="/home/toodemhard/.local/share/fnm:$PATH"
+eval "`fnm env`"

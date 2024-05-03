@@ -138,10 +138,10 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-# bindsym $mod+m exec "i3 exit"
-# bindsym $mod+Shift+i exec "systemctl reboot"
+bindsym $mod+m exec "i3 exit"
+bindsym $mod+Shift+i exec "systemctl suspend"
 # bindsym $mod+Shift+o exec "systemctl poweroff"
-bindsym $mod+Shift+p exec "systemctl suspend"
+# bindsym $mod+Shift+p exec "systemctl suspend"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
