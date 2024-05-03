@@ -8,7 +8,7 @@ require("gruvbox").setup({
 	palette_overrides = {
 		dark0_hard = "#0f1214",
 	},
-	-- transparent_mode = true,
+	transparent_mode = true,
 })
 
 require("ayu").setup({

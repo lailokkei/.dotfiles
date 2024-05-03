@@ -1,5 +1,7 @@
 Set-Alias ls exa
 
+$env:CMAKE_GENERATOR = "Ninja"
+
 $CONFIG_PATH = Join-Path(Split-Path $PSScriptRoot) starship.toml
 $ENV:STARSHIP_CONFIG = $CONFIG_PATH
 

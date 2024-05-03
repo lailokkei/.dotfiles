@@ -30,7 +30,7 @@ local cmp = require("cmp")
 
 cmp.setup({
 	mapping = {
-		["<CR>"] = cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace }),
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	},
 	window = {
 		completion = cmp.config.window.bordered(),
@@ -42,6 +42,6 @@ require("lspconfig").clangd.setup({
 	cmd = {
 		"clangd",
 		"--offset-encoding=utf-16",
-		"--query-driver=C:\\msys64\\mingw64\\bin\\c++.exe",
+		"--query-driver=C:\\Users\\User\\scoop\\apps\\gcc\\current\\bin\\g++.exe",
 	},
 })
